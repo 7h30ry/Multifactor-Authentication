@@ -10,7 +10,7 @@ class otp_verifier(Tk):
         self.geometry("600x550")
         self.resizable(False, False)
         self.n = random.randint(1000,9999)
-        self.client=Client("AC2c8ba9b204452737dd2be7298c7ea30a","11f9b2e9304965dab71ce951388f981c") #Put your Account_sid and AUTH Token you got from twilio
+        self.client=Client("account_sid","Token") #Put your Account_sid and AUTH Token you got from twilio
         self.client.messages.create(to="+2349018955027", #Phone number you are sendig otp to 
                                     from_="+13393453079",# Phone number for dending otp given to you by twilio
                                     body=self.n)
